@@ -1,0 +1,651 @@
+* {
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    /* height: auto; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.account {
+    display: flex;
+}
+
+.separation {
+    border: 1px solid #ffffff;
+    margin: 5px;
+    height: 18px;
+}
+
+.top-bar {
+    background-color: #0282a5;
+}
+
+#App {
+    /* background: linear-gradient(to bottom, #42c2e5 0%, #e5f7fb 100%); */
+}
+
+/* Hiệu ứng chữ chuyển màu */
+.span-vip {
+    padding-block: 10px;
+    /*  Tạo khoảng cách trên + dưới cho chữ.*/
+    background: linear-gradient(90deg, #0282a5 0%, #46c2e4 100%);
+    /*  Tạo background dạng gradient màu đỏ → cam chạy ngang 90°..*/
+    -webkit-background-clip: text;
+    /*  Cắt background theo hình dạng chữ (chỉ phần chữ mới hiện gradient).*/
+    -webkit-text-fill-color: transparent;
+    /* Làm chữ trong suốt để background gradient bên dưới hiện ra.*/
+}
+
+/* Hết Hiệu ứng chữ chuyển màu */
+
+
+/* Css ở phần tìm kiếm */
+.header-search {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.header-logo {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.search-header {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.search-smart {
+    height: 30px;
+    /* background-color: #0282a5; */
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); */
+    border: 1px solid #0282a5;
+}
+
+.search-smart:hover input {
+    width: 100%;
+}
+
+.search-smart input {
+    /* width: 0; */
+    border: none;
+    outline: none;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.sear {
+    display: flex;
+    color: #0282a5;
+}
+.nav-item {
+    position: relative;
+    margin: 5px;
+    text-transform: uppercase;
+    color: #000;
+}
+.nav-item::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    background-image: linear-gradient(180deg, #0282a5 0%, #37bee3 100%);
+    height: 2px;
+    width: 100%;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+}
+.nav-item a:hover {
+    color: #0282a5;
+}
+/* Hết css ở phần tìm kiếm */
+
+
+/* css ở phần giao hàng và thông tin ở phần menu */
+.time-work {
+    display: flex;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    gap: 10px;
+    /* Khoảng cách giữa icon và chữ */
+}
+
+.time-work .icon img {
+    width: 46px;
+    height: 46px;
+}
+
+.time-work .text {
+    display: flex;
+    flex-direction: column;
+    /* Giữ cho tiêu đề và mô tả xếp dọc */
+}
+
+.text span {
+    font-size: 14px;
+}
+
+.header-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hết css ở phần thông tin */
+
+/* Css ở phần menu */
+.text-sỉze {
+    font-size: 18px;
+    font-weight: uppercase;
+}
+
+.border-top {
+    border-top: 1px solid #c2c0c0 !important;
+}
+
+.set-width {
+    /* width: 1106px; */
+    max-width: 1106px;
+    margin-top: 20px;
+    justify-content: center;
+    display: grid;
+}
+
+/* Hết Css ở phần menu */
+
+/* CSS ở phần banner */
+.banner {
+    background: linear-gradient(to bottom, #42c2e5 0%, #e5f7fb 100%);
+    height: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b1b1b1;
+}
+
+.img-fluid {
+    border-radius: 20px;
+}
+.carousel-inner img {
+    object-fit: cover;
+}
+
+/*hết CSS ở phần banner */
+
+
+/* CSS ở phần danh mục sản phẩm nổi bật*/
+.featured-products {
+    align-items: center;
+    justify-content: center;
+    min-height: auto;
+    /* background-color: #ffffff; */
+    border-radius: 10px;
+    display: block;
+    /* thay vì display:flex */
+    /* background-image: linear-gradient(180deg, #0282a5 0%, #37bee3 100%); */
+    margin-top: 20px;
+    padding: 24px 16px;
+    /* cho có “gutter” hai bên */
+}
+
+.card-wrapper {
+    max-width: 1200px;
+    /* vừa cho 3 sản phẩm */
+    margin: 0 auto;
+    /* căn giữa container */
+    padding: 20px 0px;
+    overflow: hidden;
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 18px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-list .card-item .card-link:hover {
+    border: 1px solid #333;
+    border-color: #0282a5;
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-item {
+    list-style: none;
+}
+
+.card-list .card-link .badge {
+    color: #f3f7f8;
+    margin: 16px 0 18px;
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    background-color: #46c2e4;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #000;
+    font-weight: 500;
+}
+
+.card-list .card-link .card-button {
+    height: 35px;
+    width: 35px;
+    color: #0282a5;
+    border-radius: 50%;
+    margin: 30px 0 5px;
+    border: 1px solid #0282a5;
+    background: none;
+    cursor: pointer;
+    transition: 0.4s ease;
+    transform: rotate(-45deg);
+}
+
+.card-link {
+    margin-bottom: 30px;
+}
+
+.card-list .card-link:hover .card-button {
+    color: #ffffff;
+    background-color: #0282a5;
+}
+
+.card-wrapper .swiper-slide-button {
+    margin-top: -35px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .card-wrapper {
+        margin: 0 10px 25px;
+    }
+
+    .swiper-slide-button {
+        display: none !important;
+    }
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.heading-title h2 a {
+    color: #ffffff;
+}
+
+.img-flash-sale {
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* KHÔNG dùng flex ở đây để tránh kéo lệch */
+
+/* Card wrapper là swiper container */
+.card-wrapper.swiper {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* căn giữa toàn khối */
+    overflow: hidden;
+}
+
+/* Căn giữa nội dung từng slide */
+.card-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+/* Đặt width cố định để Swiper tính đúng */
+.card-item {
+    width: 300px;
+    margin: 20px 0 20px 0;
+}
+
+/* Cho pagination ở dưới, canh giữa theo khối */
+.swiper-pagination {
+    /* position: static; */
+    margin-top: 8px;
+    width: fit-content;
+    /* background: #42c2e5; */
+    /* margin: 20px; */
+    border-radius: 50px;
+    padding: 16px;
+    color: #fff !important;
+}
+
+/* hết CSS ở phần danh mục sản phẩm nổi bật*/
+
+
+/*CSS ở phần danh mục sản phẩm */
+.slider-product h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.products-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.category-item {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #00AEEF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    /* căn giữa dọc */
+    justify-content: center;
+    /* căn giữa ngang */
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-item img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    transition: 0.1s;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Hết CSS ở phần danh mục sản phẩm */
+
+/* Bắt đầu CSS ở phần danh sách sản phẩm */
+.set-width-product {
+    max-width: 20% !important;
+    padding: 5px;
+}
+
+.set-width-product:hover {
+    transform: scale(1.02);
+    transition: 0.1s;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.btn-card-shop,
+.btn-view-product {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background: #ffff;
+    border: 1px solid;
+    margin: 0 10px 10px 10px;
+}
+
+.btn-card-shop:hover,
+.btn-view-product:hover {
+    transform: scale(1.05);
+    transition: 0.1s;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-text {
+    color: #5F666A;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.price-products {
+    font-weight: 700 !important;
+    color: #ff0000;
+}
+
+.btn-view {
+    background-color: #42c2e5;
+    /* width: fit-content; CSS cho chiều rộng cho vừa đủ nội dung */
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: 1px solid #0282a5;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.btn-view:hover {
+    background-color: #fff;
+    color: #00AEEF;
+}
+
+/* Kết thúc CSS ở phần danh sách sản phẩm */
+
+/* Bắt đầu CSS ở phần cầm nang */
+/* .blog-content, 
+.article-content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+} */
+.blog-title {
+    display: flex;
+    text-align: start;
+    margin-top: 30px;
+}
+
+.blog-title:hover {
+    box-shadow: 0 10px 20px rgba(194, 194, 194, 0.3);
+    transform: scale(1.01);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.thumb {
+    width: 100%;
+    height: auto;
+}
+
+.thumb img {
+    width: 120px;
+    height: auto;
+    display: flex;
+}
+
+.blog-content {
+    margin: 0 0 0 10px;
+}
+
+.blog-content h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.text-content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    color: #5F666A;
+    font-size: 14px;
+    line-height: 20px;
+    white-space: initial;
+    overflow: hidden;
+}
+
+.date {
+    color: #5F666A;
+    font-size: 12px;
+    margin-bottom: 10px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-blog {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Kết thúc CSS ở phần cầm nang */
+/* Bắt đầu CSS ở phần đối tác */
+.carousel-slide {
+    margin: 30px 0 30px 0;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel-slide::-webkit-scrollbar {
+    display: none;
+
+}
+
+.group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1em; */
+    animation: spin 20s infinite linear;
+    padding-right: 1em;
+}
+
+.card-img {
+    flex: 0 0 5em;
+    height: auto;
+    /* background-color: #46c2e4; */
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-items: center;
+    border: none;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+
+    to {
+        translate: -100%;
+    }
+}
+
+.card-img img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+}
+/* Kết thúc CSS ở phần đối tác */
+
+/* Bắt đầu css phần chân trang */
+.navbar-brand img {
+    width: 200px;
+    height: auto;
+}
+#Footer {
+    /* background-image: linear-gradient(180deg, #0282a5 0%, #37bee3 100%); */
+    background-color: #0282a5;
+}
+.top-footer {
+    border-bottom: 1px solid #d6d6d6;
+}
+.list-menu {
+    padding-left: 0;
+}
+.list-menu li a {
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    font-size: 14px;
+}
+.list-menu li {
+    list-style: none;
+    margin: 10px;
+}
+.col-footer {
+    margin-top: 30px;
+}
+.list-menu li:hover {
+    transform: translateX(8px);
+    transition: 0.2s;
+}
+.title-menu {
+    font-size: 20px;
+}
+.search-pruducts {
+    border-radius: 50px;
+}
+.btn-search {
+    border: 1px solid #fff;
+    color: #fff;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.btn-search:hover {
+    color: #0282a5;
+    background-color: #fff;
+    font-weight: 700;
+}
+/* Kết thúc css phần chân trang */
