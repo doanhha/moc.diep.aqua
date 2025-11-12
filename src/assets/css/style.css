@@ -2,14 +2,11 @@
     font-family: "Roboto", sans-serif;
 }
 
-html {
-    /* height: auto; */
-    width: 100%;
+html, body, #root {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    width: 100%;
 }
-
 .account {
     display: flex;
 }
@@ -22,10 +19,6 @@ html {
 
 .top-bar {
     background-color: #0282a5;
-}
-
-#App {
-    /* background: linear-gradient(to bottom, #42c2e5 0%, #e5f7fb 100%); */
 }
 
 /* Hiệu ứng chữ chuyển màu */
@@ -51,8 +44,8 @@ html {
 }
 
 .header-logo {
-    width: 90px;
-    height: 90px;
+    width: 162px;
+    height: auto;
     overflow: hidden;
 }
 
@@ -170,11 +163,9 @@ html {
 }
 
 .set-width {
-    /* width: 1106px; */
-    max-width: 1106px;
+    width: 100%;
+    max-width: 100%;
     margin-top: 20px;
-    justify-content: center;
-    display: grid;
 }
 
 /* Hết Css ở phần menu */
