@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
     "@icon/themify-icons": "^1.0.1-alpha.3",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.8",

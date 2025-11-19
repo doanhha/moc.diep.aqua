@@ -101,8 +101,7 @@ const Producttop = () => {
             0: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 4 },
-          }}
-        >
+          }}>
           {products.map((item) => (
             <SwiperSlide key={item.id} className="card-item">
               <a href="#" className="card-link">

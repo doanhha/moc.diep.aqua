@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Products2 = () => {
   return (
     <>
@@ -15,8 +16,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"></button>
                             </div>
                         </div>
                     </div>
@@ -29,8 +30,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -43,8 +44,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -57,8 +58,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -71,8 +72,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -85,8 +86,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"></button>
+                                <button className="btn-view-product"><i className="fa-solid fa-eye"></i></button>
                             </div>
                         </div>
                     </div>
@@ -99,8 +100,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -113,8 +114,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -127,8 +128,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>
@@ -141,8 +142,8 @@ const Products2 = () => {
                                 <p className="price-products">1.350.000đ</p>
                             </div>
                             <div className="group-action">
-                                <button className="btn-card-shop"><i className="ti-shopping-cart" /></button>
-                                <button className="btn-view-product"><i className="ti-eye" /></button>
+                                <button className="btn-card-shop"><i className="ti ti-shopping-cart" /></button>
+                                <button className="btn-view-product"><i className="ti ti-eye" /></button>
                             </div>
                         </div>
                     </div>

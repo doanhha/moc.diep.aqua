@@ -596,8 +596,8 @@ html, body, #root {
     height: auto;
 }
 #Footer {
-    /* background-image: linear-gradient(180deg, #0282a5 0%, #37bee3 100%); */
-    background-color: #0282a5;
+    background-image: linear-gradient(180deg, #0282a5 0%, #37bee3 100%);
+    /* background-color: #0282a5; */
 }
 .top-footer {
     border-bottom: 1px solid #d6d6d6;
@@ -605,7 +605,7 @@ html, body, #root {
 .list-menu {
     padding-left: 0;
 }
-.list-menu li a {
+.list-menu li {
     color: #fff;
     text-decoration: none;
     list-style: none;
@@ -621,6 +621,7 @@ html, body, #root {
 .list-menu li:hover {
     transform: translateX(8px);
     transition: 0.2s;
+    cursor: pointer;
 }
 .title-menu {
     font-size: 20px;
@@ -640,3 +641,12 @@ html, body, #root {
     font-weight: 700;
 }
 /* Kết thúc css phần chân trang */
+.copyright p {
+    color: #fff;
+    font-size: 12px;
+}
+.copyright a {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
