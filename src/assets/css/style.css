@@ -430,7 +430,18 @@ html, body, #root {
 
 .card-title {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    /* color: #5F666A; */
+    /* font-size: 14px; */
+    line-height: 20px;
+    white-space: initial;
+    overflow: hidden;
 }
 
 .price-products {
