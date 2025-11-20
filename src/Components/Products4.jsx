@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Products4 = () => {
+const Products4 = () => { 
     const products = [
         { id: 1, name: "Cá Hồi Xông Khói Vị Truyền Thống", price: "269.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", },
         { id: 2, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", },
