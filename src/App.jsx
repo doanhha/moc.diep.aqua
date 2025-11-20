@@ -14,13 +14,7 @@ import Infomation from './Components/Infomation.jsx'
 const App = () => {
   return (
     <>
-    <Header/>
-    <Producttop/>
-    <Products/>
-    <Products2/>
-    <Products3/>
-    <Products4/>
-    <Footer/>
+    <Infomation/>
     </>
   )
 }
