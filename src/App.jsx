@@ -10,17 +10,12 @@ import Products3 from './Components/Products3.jsx'
 import Products4 from './Components/Products4.jsx'
 import Footer from './Components/Footer.jsx'
 import Infomation from './Components/Infomation.jsx'
+import ProductsList from './Components/ProductsList.jsx'
 
 const App = () => {
   return (
     <>
-    <Header />
-    <Producttop />
-    <Products />
-    <Products2 />
-    <Products3 />
-    <Products4 />
-    <Footer />
+    <ProductsList />
     </>
   )
 }
