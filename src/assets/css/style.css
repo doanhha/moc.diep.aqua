@@ -661,3 +661,14 @@ html, body, #root {
     font-size: 12px;
     text-decoration: none;
 }
+
+.img-banner {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+.sale {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 25px;
+}
