@@ -23,7 +23,7 @@ html, body, #root {
 
 /* Hiệu ứng chữ chuyển màu */
 .span-vip {
-    padding-block: 10px;
+    /* padding-block: 10px; */
     /*  Tạo khoảng cách trên + dưới cho chữ.*/
     background: linear-gradient(90deg, #0282a5 0%, #46c2e4 100%);
     /*  Tạo background dạng gradient màu đỏ → cam chạy ngang 90°..*/
@@ -499,7 +499,7 @@ html, body, #root {
 }
 
 .thumb img {
-    width: 120px;
+    width: 150px;
     height: auto;
     display: flex;
 }
@@ -671,4 +671,34 @@ html, body, #root {
     font-size: 28px;
     font-weight: 600;
     margin-top: 25px;
+}
+.product-sale-item {
+  display: flex;
+  align-items: flex-start;   /* canh chữ từ trên */
+  gap: 12px;
+  border-radius: 10px;
+  border: 1px solid #d6d6d6;
+  align-items: center;
+}
+
+.product-img-sale {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info .product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.product-info .product-origin {
+  margin: 6px 0;
+}
+
+.product-info .product-price {
+  font-size: 18px;
+  font-weight: 600;
 }
