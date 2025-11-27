@@ -86,14 +86,28 @@ const ProductsList = () => {
                                         <p className="price-products">{item.price}đ </p>
                                     </div>
                                     <div className="group-action">
-                                        <button className="btn-card-shop"><img style={{width: 30, height: 30}} src={item.icon} alt="Add to cart" /></button>
-                                        <button className="btn-view-product"><img style={{width: 30, height: 30}} src={item.iconView} alt="View product" /></button>
+                                        <button className="btn-card-shop"><img style={{ width: 30, height: 30 }} src={item.icon} alt="Add to cart" /></button>
+                                        <button className="btn-view-product"><img style={{ width: 30, height: 30 }} src={item.iconView} alt="View product" /></button>
                                     </div>
                                 </div>
                             </div>
                         )}
 
                     </div>
+                    <nav aria-label="Page navigation example">
+                        <ul style={{ display: "flex", justifyContent: "center", gap: "5px", marginTop: "20px" }} className="pagination">
+                            <li className="page-item"><a className="page-link" href="#">1</a></li>
+                            <li className="page-item"><a className="page-link" href="#">2</a></li>
+                            <li className="page-item"><a className="page-link" href="#">3</a></li>
+                            <li className="page-item">
+                                <a className="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">»</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </nav>
+
                 </div>
             ))}
             <Footer />

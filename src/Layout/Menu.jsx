@@ -20,11 +20,12 @@ const Menu = () => {
                                 <li className="nav-item">
                                     <a className="nav-link hover-animation" href="#">Giới thiệu</a>
                                 </li>
-                                <div className="dropdown">
-                                    <button style={{backgroundColor: "white", color: "black",}} className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown button
+                                <div style={{display: 'flex'}} className="dropdown nav-item">
+                                    <button style={{backgroundColor: "white", color: "black", border: "none", padding: "8px 8px"}} className="btn btn-secondary dropdown-toggle hover-animation"
+                                     type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Sản phẩm
                                     </button>
-                                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <ul style={{textTransform: "capitalize"}} className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                         <li><a className="dropdown-item" href="#">Action</a></li>
                                         <li><a className="dropdown-item" href="#">Another action</a></li>
                                         <li><a className="dropdown-item" href="#">Something else here</a></li>

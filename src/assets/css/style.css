@@ -96,7 +96,6 @@ html, body, #root {
 .nav-item {
     position: relative;
     margin: 5px;
-    text-transform: uppercase;
     color: #000;
 }
 .nav-item::after {
@@ -116,6 +115,10 @@ html, body, #root {
 }
 .nav-item a:hover {
     color: #0282a5;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #000;
 }
 /* Hết css ở phần tìm kiếm */
 
