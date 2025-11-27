@@ -11,6 +11,8 @@ import Products4 from './Components/Products4.jsx'
 import Footer from './Components/Footer.jsx'
 import Infomation from './Components/Infomation.jsx'
 import ProductsList from './Components/ProductsList.jsx'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 
 const App = () => {
   return (
