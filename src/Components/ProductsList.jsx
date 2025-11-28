@@ -1,11 +1,11 @@
-import React from 'react'
+import 'swiper/css';
 import Topbar from '../Layout/Topbar'
 import Menu from '../Layout/Menu'
 import SearchLogo from '../Layout/SearchLogo'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Footer from "./Footer.jsx";
-import 'swiper/css';
 import Allproducts from '../Layout/Allproducts.jsx'
+import { useState } from 'react';
 
 const ProductsList = () => {
     const rawProducts = Allproducts.products.map(p => ({
@@ -15,6 +15,27 @@ const ProductsList = () => {
     const products = rawProducts.sort((a, b) => a.id - b.id);
     const listFilter = Allproducts.listFilter;
     const listFilter2 = Allproducts.listFilter2;
+    const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
+    const getPriceRange = (id) => {
+        switch (id) {
+            case 1: return { min: 0, max: 500000 };
+            case 2: return { min: 500000, max: 1000000 };
+            case 3: return { min: 1000000, max: 3000000 };
+            case 4: return { min: 3000000, max: 5000000 };
+            case 5: return { min: 5000000, max: 7000000 };
+            case 6: return { min: 7000000, max: Infinity };
+            default: return null; // không lọc theo giá
+        }
+    };
+    const priceRange = getPriceRange(selectedPriceFilter);
+
+    const filteredProducts = priceRange
+        ? products.filter(item =>
+            item.priceNumber >= priceRange.min &&
+            item.priceNumber <= priceRange.max
+        )
+        : products;
+
     return (
         <>
             <Topbar />
@@ -63,20 +84,24 @@ const ProductsList = () => {
 
                     </Swiper>
                     <div className="list-filter">
-                        <span className="filter-title">Đặc sản vùng miền</span>
+                        <span className="filter-title">Lọc theo khoảng giá</span>
                         {listFilter.map(filter => (
-                            <span key={filter.id} className="filter-item">{filter.name}đ</span>
+                            <button key={filter.id}
+                                className={"filter-item " + (selectedPriceFilter === filter.id ? "filter-item-active" : "")}
+                                onClick={() => setSelectedPriceFilter(selectedPriceFilter === filter.id ? null : filter.id)}>
+                                {filter.name}
+                            </button>
                         ))}
                     </div>
                     <div className="list-filter">
                         <span className="filter-title">Chọn theo tiêu chí</span>
                         {listFilter2.map(filter => (
-                            <span key={filter.id} className="filter-item">{filter.name}</span>
+                            <button key={filter.id} className="filter-item">{filter.name}</button>
                         ))}
                     </div>
                     <h1 style={{ fontSize: 25, textTransform: 'uppercase' }} className="text-center mb-5">Tất cả sản phẩm</h1>
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        {products.map((item) =>
+                        {filteredProducts.map((item) =>
                             <div className="col set-width-product text-center" key={item.id}>
                                 <div className="card">
                                     <img src={item.image} className="card-img-top" alt={item.name} title={item.name} />

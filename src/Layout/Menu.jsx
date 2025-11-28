@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Menu = () => {
+    const listFindProducts = [
+        { id: 1, name: "Máy Lọc, Vật Liệu Lọc" },
+        { id: 2, name: "Máy Sủi Oxy, Bơm, Máy Sưởi" },
+        { id: 3, name: "Phân Nền, Cốt Nền Thủy Sinh" },
+        { id: 4, name: "Đèn Thủy Sinh" },
+        { id: 5, name: "Phụ Kiện Thủy Sinh Khác" },
+        { id: 6, name: "Thức Ăn Cho Cá/Tép" },
+        { id: 7, name: "Thuốc Chữa Bệnh Cho Cá/Tép" },
+        { id: 8, name: "Cây Thủy Sinh" }
+    ]
     return (
         <>
             <div className="container">
@@ -20,17 +30,28 @@ const Menu = () => {
                                 <li className="nav-item">
                                     <a className="nav-link hover-animation" href="#">Giới thiệu</a>
                                 </li>
-                                <div style={{display: 'flex'}} className="dropdown nav-item">
-                                    <button style={{backgroundColor: "white", color: "black", border: "none", padding: "8px 8px"}} className="btn btn-secondary dropdown-toggle hover-animation"
-                                     type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                <li className="nav-item dropdown">
+                                    <a
+                                        className="nav-link dropdown-toggle hover-animation"
+                                        href="#"
+                                        id="navbarDropdown"
+                                        role="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
                                         Sản phẩm
-                                    </button>
-                                    <ul style={{textTransform: "capitalize"}} className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                        <li><a className="dropdown-item" href="#">Action</a></li>
-                                        <li><a className="dropdown-item" href="#">Another action</a></li>
-                                        <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                    </a>
+
+                                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        {listFindProducts.map(itemSoft => (
+                                            <li key={itemSoft.id}>
+                                                <a className="dropdown-item" href="#">{itemSoft.name}</a>
+                                            </li>
+                                        ))}
                                     </ul>
-                                </div>
+                                </li>
+
                                 <li className="nav-item">
                                     <a className="nav-link hover-animation" href="#">Liên hệ</a>
                                 </li>
