@@ -32,13 +32,11 @@ const imagesBanner = [
         { id: 3, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
         { id: 4, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
         { id: 5, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        
         { id: 6, name: "Cá Hồi Xông Khói Vị Truyền Thống", price: "269.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
         { id: 7, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
         { id: 8, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
         { id: 9, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
         { id: 10, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-    
     ];
 
 const Allproducts = {

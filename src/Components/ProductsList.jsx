@@ -5,16 +5,16 @@ import SearchLogo from '../Layout/SearchLogo'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Footer from "./Footer.jsx";
 import Allproducts from '../Layout/Allproducts.jsx'
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const ProductsList = () => {
+    const listFilter = Allproducts.listFilter;
+    const listFilter2 = Allproducts.listFilter2; 
     const rawProducts = Allproducts.products.map(p => ({
         ...p,
         priceNumber: Number(p.price.replace(/\./g, "")),
     }));
     const products = rawProducts.sort((a, b) => a.id - b.id);
-    const listFilter = Allproducts.listFilter;
-    const listFilter2 = Allproducts.listFilter2;
     const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
     const getPriceRange = (id) => {
         switch (id) {
@@ -28,14 +28,21 @@ const ProductsList = () => {
         }
     };
     const priceRange = getPriceRange(selectedPriceFilter);
-
-    const filteredProducts = priceRange
-        ? products.filter(item =>
-            item.priceNumber >= priceRange.min &&
-            item.priceNumber <= priceRange.max
-        )
-        : products;
-
+    const PRICE_RANGE = priceRange ? products.filter(item => item.priceNumber >= priceRange.min && item.priceNumber <= priceRange.max) : products;
+    const filteredProducts = useMemo(() => {
+        let data = [...products];
+        const range = getPriceRange(setSelectedPriceFilter);
+        if (range) {
+            data = data.filter(p => p.priceNumber >= range.min && p.priceNumber <= range.max);
+        }
+        
+    });
+    // const filteredProducts = priceRange
+    //     ? products.filter(item =>
+    //         item.priceNumber >= priceRange.min &&
+    //         item.priceNumber <= priceRange.max
+    //     ) 
+    //     : products;
     return (
         <>
             <Topbar />
@@ -97,11 +104,11 @@ const ProductsList = () => {
                         <span className="filter-title">Chọn theo tiêu chí</span>
                         {listFilter2.map(filter => (
                             <button key={filter.id} className="filter-item">{filter.name}</button>
-                        ))}
+                        ))};
                     </div>
                     <h1 style={{ fontSize: 25, textTransform: 'uppercase' }} className="text-center mb-5">Tất cả sản phẩm</h1>
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        {filteredProducts.map((item) =>
+                        {PRICE_RANGE.map((item) =>
                             <div className="col set-width-product text-center" key={item.id}>
                                 <div className="card">
                                     <img src={item.image} className="card-img-top" alt={item.name} title={item.name} />
@@ -111,8 +118,8 @@ const ProductsList = () => {
                                         <p className="price-products">{item.price}đ </p>
                                     </div>
                                     <div className="group-action">
-                                        <button className="btn-card-shop"><img style={{ width: 30, height: 30 }} src={item.icon} alt="Add to cart" /></button>
-                                        <button className="btn-view-product"><img style={{ width: 30, height: 30 }} src={item.iconView} alt="View product" /></button>
+                                        <button className="btn-card-shop"><img style={{ width: 30, height: 30 }} src={item.icon} alt="Add to cart" title='Thêm Giỏ Hàng'/></button>
+                                        <button className="btn-view-product"><img style={{ width: 30, height: 30 }} src={item.iconView} alt="View product" title='Xem Thêm'/></button>
                                     </div>
                                 </div>
                             </div>

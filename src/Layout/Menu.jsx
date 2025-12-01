@@ -2,14 +2,15 @@ import React from 'react'
 
 const Menu = () => {
     const listFindProducts = [
-        { id: 1, name: "Máy Lọc, Vật Liệu Lọc" },
-        { id: 2, name: "Máy Sủi Oxy, Bơm, Máy Sưởi" },
-        { id: 3, name: "Phân Nền, Cốt Nền Thủy Sinh" },
-        { id: 4, name: "Đèn Thủy Sinh" },
-        { id: 5, name: "Phụ Kiện Thủy Sinh Khác" },
-        { id: 6, name: "Thức Ăn Cho Cá/Tép" },
-        { id: 7, name: "Thuốc Chữa Bệnh Cho Cá/Tép" },
-        { id: 8, name: "Cây Thủy Sinh" }
+        { id: 1, name: "Tất Cả Sản Phẩm" },
+        { id: 2, name: "Máy Lọc, Vật Liệu Lọc" },
+        { id: 3, name: "Máy Sủi Oxy, Bơm, Máy Sưởi" },
+        { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh" },
+        { id: 5, name: "Đèn Thủy Sinh" },
+        { id: 6, name: "Phụ Kiện Thủy Sinh Khác" },
+        { id: 7, name: "Thức Ăn Cho Cá/Tép" },
+        { id: 8, name: "Thuốc Chữa Bệnh Cho Cá/Tép" },
+        { id: 9, name: "Cây Thủy Sinh" }
     ]
     return (
         <>
@@ -46,7 +47,7 @@ const Menu = () => {
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         {listFindProducts.map(itemSoft => (
                                             <li key={itemSoft.id}>
-                                                <a className="dropdown-item" href="#">{itemSoft.name}</a>
+                                                <a className="dropdown-item click-open-hover" href="#">{itemSoft.name}</a>
                                             </li>
                                         ))}
                                     </ul>

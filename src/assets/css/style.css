@@ -753,3 +753,8 @@ html, body, #root {
     background-color: #0282a5;
     color: #ffff;
 }
+
+.click-open-hover:hover {
+    color: #ffffff !important;
+    background-color: #0282a5 !important;
+}
