@@ -14,7 +14,7 @@ const ProductsList = () => {
         ...p,
         priceNumber: Number(p.price.replace(/\./g, "")),
     }));
-    const products = rawProducts.sort((a, b) => a.id - b.id);
+    const products = [...rawProducts].sort((a, b) => a.id - b.id);
     const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
     const [selectedSort, setSelectedSort] = useState(null);
     const getPriceRange = (id) => {
