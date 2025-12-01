@@ -4,11 +4,11 @@ const imagesBanner = [
         { id: 1, name: 'Banner', image: "./assets/img/product-image-1.webp" },
     ];
     const productSale = [
-        { id: 1, name: "Tôm Càng Xanh Sống", origin: "Xuất xứ: Việt Nam", price: "1.000.000", image: "./assets/img/product-1.webp" },
-        { id: 2, name: "Tôm Càng Xanh Sống", origin: "Xuất xứ: Việt Nam", price: "1.000.000", image: "./assets/img/product-2.webp" },
-        { id: 3, name: "Tôm Càng Xanh Sống", origin: "Xuất xứ: Việt Nam", price: "1.000.000", image: "./assets/img/product-1.webp" },
-        { id: 4, name: "Tôm Càng Xanh Sống", origin: "Xuất xứ: Việt Nam", price: "1.000.000", image: "./assets/img/product-1.webp" },
-        { id: 5, name: "Tôm Càng Xanh Sống", origin: "Xuất xứ: Việt Nam", price: "1.000.000", image: "./assets/img/product-1.webp" },
+        { id: 1, name: "Tôm Càng Xanh Sống", price: "1.000.000", image: "./assets/img/product-1.webp" },
+        { id: 2, name: "Tôm Càng Xanh Sống", price: "1.000.000", image: "./assets/img/product-2.webp" },
+        { id: 3, name: "Tôm Càng Xanh Sống", price: "1.000.000", image: "./assets/img/product-1.webp" },
+        { id: 4, name: "Tôm Càng Xanh Sống", price: "1.000.000", image: "./assets/img/product-1.webp" },
+        { id: 5, name: "Tôm Càng Xanh Sống", price: "1.000.000", image: "./assets/img/product-1.webp" },
     ];
     const listFilter = [
         { id: 1, name: "Giá dưới 500.000" },
@@ -27,16 +27,16 @@ const imagesBanner = [
         { id: 6, name: "Cũ Nhất" },
     ];
     const products = [
-        { id: 1, name: "Cá Hồi Xông Khói Vị Truyền Thống", price: "269.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-        { id: 2, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 3, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 4, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 5, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 6, name: "Cá Hồi Xông Khói Vị Truyền Thống", price: "269.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-        { id: 7, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 8, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 9, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
-        { id: 10, name: "Cá Hồi Cắt Khoanh", price: "1.000.000", origin: "Xuất xứ: Việt Nam", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 1, name: "Thức ăn cá cảnh Hikari Mix 5 in 1 cao cấp cho cá cảnh tăng màu tăng size", price: "135.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+        { id: 2, name: "Đèn Lon thủy sinh KZJ RM4, chiếc đèn chuyên chơi Biotope độc đáo", price: "1.650.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 3, name: "Đèn KZJ RA3 hệ LED WRGB+UV chuyên dùng cho bể Biotope", price: "1.400.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 4, name: "Máy Lọc Chìm Sunsun YQP: Giải Pháp Toàn Diện Cho Bể Cá Cảnh Luôn Sạch Trong", price: "145.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 5, name: "Lọc thác Sunsun Xiaoli EBL 401, 402, 403", price: "105.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 6, name: "Máy sủi Oxy tích điện bể cá Sunsun YQB cao cấp siêu êm", price: "188.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+        { id: 7, name: "Máy thổi luồng SUNSUN JVP – Giải pháp tạo dòng chảy cho bể cá", price: "320.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 8, name: "Lọc thùng tách phân Sunsun YWY 800 - tích hợp tách phân, xả đáy", price: "1.530.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 9, name: "Đèn rọi chỉnh tiêu cự HBPRO, 3 chế độ màu cho bể cá", price: "119.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
+        { id: 10, name: "Detox Koika - Xử lý Clo, kim loại nặng, chống sốc cá và khử độc tố", price: "31.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg"},
     ];
 
 const Allproducts = {

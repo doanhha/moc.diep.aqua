@@ -16,6 +16,7 @@ const ProductsList = () => {
     }));
     const products = rawProducts.sort((a, b) => a.id - b.id);
     const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
+    const [selectedSort, setSelectedSort] = useState(null);
     const getPriceRange = (id) => {
         switch (id) {
             case 1: return { min: 0, max: 500000 };
@@ -27,16 +28,38 @@ const ProductsList = () => {
             default: return null; // không lọc theo giá
         }
     };
-    const priceRange = getPriceRange(selectedPriceFilter);
-    const PRICE_RANGE = priceRange ? products.filter(item => item.priceNumber >= priceRange.min && item.priceNumber <= priceRange.max) : products;
+    // const priceRange = getPriceRange(selectedPriceFilter);
+    // const PRICE_RANGE = priceRange ? products.filter(item => item.priceNumber >= priceRange.min && item.priceNumber <= priceRange.max) : products;
     const filteredProducts = useMemo(() => {
         let data = [...products];
-        const range = getPriceRange(setSelectedPriceFilter);
+        const range = getPriceRange(selectedPriceFilter);
         if (range) {
             data = data.filter(p => p.priceNumber >= range.min && p.priceNumber <= range.max);
         }
-        
-    });
+        switch (selectedSort) {
+            case 1: // Tên A-Z
+                data.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
+                break;
+            case 2: // Tên Z-A
+                data.sort((a, b) => b.name.localeCompare(a.name, 'vi'));
+                break;
+            case 3: // Giá Tăng Dần
+                data.sort((a, b) => a.priceNumber - b.priceNumber);
+                break;
+            case 4: // Giá Giảm Dần
+                data.sort((a, b) => b.priceNumber - a.priceNumber);
+                break;
+            case 5: // Mới Nhất (id lớn hơn = mới hơn)
+                data.sort((a, b) => b.id - a.id);
+                break;
+            case 6: // Cũ Nhất
+                data.sort((a, b) => a.id - b.id);
+                break;
+            default:
+                break;
+        }
+        return data;
+    }, [products, selectedPriceFilter, selectedSort]);
     // const filteredProducts = priceRange
     //     ? products.filter(item =>
     //         item.priceNumber >= priceRange.min &&
@@ -55,7 +78,7 @@ const ProductsList = () => {
                             <nav aria-label="breadcrumb">
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item"><a style={{ textDecoration: "none", color: "black", }} href="#">Trang chủ</a></li>
-                                    <li className="breadcrumb-item active span-vip" aria-current="page">Tất cả sản phẩm</li>
+                                    <li style={{cursor: 'pointer'}} className="breadcrumb-item active span-vip" aria-current="page">Tất cả sản phẩm</li>
                                 </ol>
                             </nav>
                         </div>
@@ -63,7 +86,7 @@ const ProductsList = () => {
                 </div>
             </div>
             {Allproducts.imagesBanner.map((item =>
-                <div className="container">
+                <div className="container" key={item.id}>
                     <img src={item.image} alt={item.name} className="img-banner" />
                     <h2 className="sale">Hàng giá tốt</h2>
                     {/* list products */}
@@ -79,7 +102,6 @@ const ProductsList = () => {
                                         alt=""
                                         className="product-img-sale"
                                     />
-
                                     <div className="product-info">
                                         <h4 className="product-name">{productItem.name}</h4>
                                         <p style={{ fontSize: 16, color: "#595959ff" }} className="product-origin">{productItem.origin}</p>
@@ -103,18 +125,30 @@ const ProductsList = () => {
                     <div className="list-filter">
                         <span className="filter-title">Chọn theo tiêu chí</span>
                         {listFilter2.map(filter => (
-                            <button key={filter.id} className="filter-item">{filter.name}</button>
-                        ))};
+                            <button
+                                key={filter.id}
+                                className={
+                                    "filter-item " +
+                                    (selectedSort === filter.id ? "filter-item-active" : "")
+                                }
+                                onClick={() =>
+                                    setSelectedSort(
+                                        selectedSort === filter.id ? null : filter.id
+                                    )
+                                }
+                            >
+                                {filter.name}
+                            </button>
+                        ))} 
                     </div>
                     <h1 style={{ fontSize: 25, textTransform: 'uppercase' }} className="text-center mb-5">Tất cả sản phẩm</h1>
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        {PRICE_RANGE.map((item) =>
+                        {filteredProducts.map((item) =>
                             <div className="col set-width-product text-center" key={item.id}>
                                 <div className="card">
                                     <img src={item.image} className="card-img-top" alt={item.name} title={item.name} />
                                     <div className="card-body p-0">
                                         <h4 className="card-title">{item.name}</h4>
-                                        <p className="card-text">{item.origin}</p>
                                         <p className="price-products">{item.price}đ </p>
                                     </div>
                                     <div className="group-action">
@@ -124,7 +158,9 @@ const ProductsList = () => {
                                 </div>
                             </div>
                         )}
-
+                        {filteredProducts.length === 0 && (
+                            <p className="text-center mt-3">Không tìm thấy sản phẩm phù hợp.</p>
+                        )}
                     </div>
                     <nav aria-label="Page navigation example">
                         <ul style={{ display: "flex", justifyContent: "center", gap: "5px", marginTop: "20px" }} className="pagination">
