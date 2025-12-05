@@ -9,7 +9,7 @@ import { useMemo, useState } from 'react';
 
 const ProductsList = () => {
     const listFilter = Allproducts.listFilter;
-    const listFilter2 = Allproducts.listFilter2; 
+    const listFilter2 = Allproducts.listFilter2;
     const rawProducts = Allproducts.products.map(p => ({
         ...p,
         priceNumber: Number(p.price.replace(/\./g, "")),
@@ -66,6 +66,12 @@ const ProductsList = () => {
     //         item.priceNumber <= priceRange.max
     //     ) 
     //     : products;
+    const [currentPage, setCurrentPage] = useState(1);
+    const PRODUCTS_PER_PAGE = 10;
+    const totalPages = Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+    const indexOfLast = currentPage * PRODUCTS_PER_PAGE;
+    const indexOfFirst = indexOfLast - PRODUCTS_PER_PAGE;
+    const currentProducts = filteredProducts.slice(indexOfFirst, indexOfLast);
     return (
         <>
             <Topbar />
@@ -78,7 +84,7 @@ const ProductsList = () => {
                             <nav aria-label="breadcrumb">
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item"><a style={{ textDecoration: "none", color: "black", }} href="#">Trang chủ</a></li>
-                                    <li style={{cursor: 'pointer'}} className="breadcrumb-item active span-vip" aria-current="page">Tất cả sản phẩm</li>
+                                    <li style={{ cursor: 'pointer' }} className="breadcrumb-item active span-vip" aria-current="page">Tất cả sản phẩm</li>
                                 </ol>
                             </nav>
                         </div>
@@ -139,11 +145,11 @@ const ProductsList = () => {
                             >
                                 {filter.name}
                             </button>
-                        ))} 
+                        ))}
                     </div>
                     <h1 style={{ fontSize: 25, textTransform: 'uppercase' }} className="text-center mb-5">Tất cả sản phẩm</h1>
                     <div className="row row-cols-1 row-cols-md-3 g-4">
-                        {filteredProducts.map((item) =>
+                        {currentProducts.map((item) =>
                             <div className="col set-width-product text-center" key={item.id}>
                                 <div className="card">
                                     <img src={item.image} className="card-img-top" alt={item.name} title={item.name} />
@@ -152,8 +158,8 @@ const ProductsList = () => {
                                         <p className="price-products">{item.price}đ </p>
                                     </div>
                                     <div className="group-action">
-                                        <button className="btn-card-shop"><img style={{ width: 30, height: 30 }} src={item.icon} alt="Add to cart" title='Thêm Giỏ Hàng'/></button>
-                                        <button className="btn-view-product"><img style={{ width: 30, height: 30 }} src={item.iconView} alt="View product" title='Xem Thêm'/></button>
+                                        <button className="btn-card-shop"><img style={{ width: 30, height: 30 }} src={item.icon} alt="Add to cart" title='Thêm Giỏ Hàng' /></button>
+                                        <button className="btn-view-product"><img style={{ width: 30, height: 30 }} src={item.iconView} alt="View product" title='Xem Thêm' /></button>
                                     </div>
                                 </div>
                             </div>
@@ -162,19 +168,43 @@ const ProductsList = () => {
                             <p className="text-center mt-3">Không tìm thấy sản phẩm phù hợp.</p>
                         )}
                     </div>
-                    <nav aria-label="Page navigation example">
-                        <ul style={{ display: "flex", justifyContent: "center", gap: "5px", marginTop: "20px" }} className="pagination">
-                            <li className="page-item"><a className="page-link" href="#">1</a></li>
-                            <li className="page-item"><a className="page-link" href="#">2</a></li>
-                            <li className="page-item"><a className="page-link" href="#">3</a></li>
-                            <li className="page-item">
-                                <a className="page-link" href="#" aria-label="Next">
-                                    <span aria-hidden="true">»</span>
-                                </a>
-                            </li>
+                    <div className="d-flex justify-content-center mt-4 mb-4">
+                        <button
+                            onClick={() =>
+                                setCurrentPage((prev) => Math.max(prev - 1, 1))
+                            }
+                            disabled={currentPage === 1}
+                            className="btn btn-outline-secondary me-2"
+                        >
+                            «
+                        </button>
 
-                        </ul>
-                    </nav>
+                        {Array.from({ length: totalPages }, (_, index) => {
+                            const page = index + 1;
+                            return (
+                                <button
+                                    key={page}
+                                    onClick={() => setCurrentPage(page)}
+                                    className={
+                                        page === currentPage
+                                            ? "btn btn-primary me-2"
+                                            : "btn btn-outline-primary me-2"
+                                    }
+                                >
+                                    {page}
+                                </button>
+                            );
+                        })}
+                        <button
+                            onClick={() =>
+                                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                            }
+                            disabled={currentPage === totalPages || totalPages === 0}
+                            className="btn btn-outline-secondary"
+                        >
+                            »
+                        </button>
+                    </div>
 
                 </div>
             ))}

@@ -10,7 +10,6 @@ const Header = () => {
     <Topbar/>
     <SearchLogo/>
     <Menu/>
-    <Banner/>
     </>
   )
 }
