@@ -1,6 +1,9 @@
 import React from 'react'
 
 const SearchLogo = () => {
+
+
+    
     return (
         <>
             <div className="header-middle">
@@ -13,8 +16,8 @@ const SearchLogo = () => {
                             <div className="search-header">
                                 <div className="search-smart">
                                     <input type="text" placeholder="Search.." />
-                                </div>
                                 <button ><img src="./assets/img/search-logo.svg" alt="" /></button>
+                                </div>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-5 col-md-12 header-control">

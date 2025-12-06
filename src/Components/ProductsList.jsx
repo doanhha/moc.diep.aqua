@@ -74,9 +74,6 @@ const ProductsList = () => {
     const currentProducts = filteredProducts.slice(indexOfFirst, indexOfLast);
     return (
         <>
-            <Topbar />
-            <SearchLogo />
-            <Menu />
             <div style={{ backgroundColor: "#EBF5FF" }} className="bg-home">
                 <div className="container">
                     <div className="row">
@@ -119,7 +116,7 @@ const ProductsList = () => {
 
                     </Swiper>
                     <div className="list-filter">
-                        <span className="filter-title">Lọc theo khoảng giá</span>
+                        <span className="filter-title">Lọc theo khoảng giá </span>
                         {listFilter.map(filter => (
                             <button key={filter.id}
                                 className={"filter-item " + (selectedPriceFilter === filter.id ? "filter-item-active" : "")}

@@ -1,22 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+
 const Menu = () => {
     const listFindProducts = [
-        { id: 1, name: "Tất Cả Sản Phẩm" },
-        { id: 2, name: "Máy Lọc, Vật Liệu Lọc" },
-        { id: 3, name: "Máy Sủi Oxy, Bơm, Máy Sưởi" },
-        { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh" },
-        { id: 5, name: "Đèn Thủy Sinh" },
-        { id: 6, name: "Phụ Kiện Thủy Sinh Khác" },
-        { id: 7, name: "Thức Ăn Cho Cá/Tép" },
-        { id: 8, name: "Thuốc Chữa Bệnh Cho Cá/Tép" },
-        { id: 9, name: "Cây Thủy Sinh" }
+        { id: 1, name: "Tất Cả Sản Phẩm", path: "/ProductsList"},
+        { id: 2, name: "Máy Lọc, Vật Liệu Lọc", path: "/ProductsList" },
+        { id: 3, name: "Máy Sủi Oxy, Bơm, Máy Sưởi", path: "/ProductsList" },
+        { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh", path: "/ProductsList" },
+        { id: 5, name: "Đèn Thủy Sinh", path: "/ProductsList" },
+        { id: 6, name: "Phụ Kiện Thủy Sinh Khác", path: "/ProductsList" },
+        { id: 7, name: "Thức Ăn Cho Cá/Tép", path: "/ProductsList" },
+        { id: 8, name: "Thuốc Chữa Bệnh Cho Cá/Tép", path: "/ProductsList" },
+        { id: 9, name: "Cây Thủy Sinh", path: "/ProductsList" }
     ]
     return (
         <>
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light border-top mb-2">
                     <div className="container-fluid p-0">
-                        <a className="navbar-brand text-size span-vip text-uppercase font-weight-bold" href="#">Mộc Diệp - Aquarium</a>
+                        <Link className="navbar-brand text-size span-vip text-uppercase font-weight-bold" to="/">Mộc Diệp - Aquarium</Link>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
@@ -25,16 +27,16 @@ const Menu = () => {
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav">
                                 <li className="nav-item">
-                                    <a className="nav-link active hover-animation" aria-current="page" href="#">Trang chủ</a>
+                                    <Link className="nav-link active hover-animation" aria-current="page" to="/">Trang chủ</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link hover-animation" href="#">Giới thiệu</a>
+                                    <Link className="nav-link hover-animation" to="/Infomation">Giới thiệu</Link>
                                 </li>
 
                                 <li className="nav-item dropdown">
                                     <a
                                         className="nav-link dropdown-toggle hover-animation"
-                                        href="#"
+                                        to="#"
                                         id="navbarDropdown"
                                         role="button"
                                         data-bs-toggle="dropdown"
@@ -46,14 +48,14 @@ const Menu = () => {
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         {listFindProducts.map(itemSoft => (
                                             <li key={itemSoft.id}>
-                                                <a className="dropdown-item click-open-hover" href="#">{itemSoft.name}</a>
+                                                <Link className="dropdown-item click-open-hover" to= {itemSoft.path} >{itemSoft.name}</Link>
                                             </li>
                                         ))}
                                     </ul>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link hover-animation" href="#">Liên hệ</a>
+                                    <a className="nav-link hover-animation" to="#">Liên hệ</a>
                                 </li>
                             </ul>
                         </div>
