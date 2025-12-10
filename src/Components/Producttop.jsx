@@ -9,54 +9,13 @@ import "swiper/css/pagination";
 
 const Producttop = () => {
   const products = [
-    {
-      id: 1,
-      name: "Lorem ipsum dolor sit amet.",
-      price: "1.000.000đ",
-      status: "Còn hàng",
-      badge: "Developer",
-      image: "./assets/img/product-1.webp",
-    },
-    {
-      id: 2,
-      name: "Lorem ipsum dolor sit amet.",
-      price: "1.000.000đ",
-      status: "Còn hàng",
-      badge: "Developer",
-      image: "./assets/img/product-1.webp",
-    },
-    {
-      id: 3,
-      name: "Lorem ipsum dolor sit amet.",
-      price: "1.000.000đ",
-      status: "Còn hàng",
-      badge: "Developer",
-      image: "./assets/img/product-1.webp",
-    },
-    {
-      id: 4,
-      name: "Lorem ipsum dolor sit amet.",
-      price: "1.000.000đ",
-      status: "Còn hàng",
-      badge: "Developer",
-      image: "./assets/img/product-1.webp",
-    },
-    {
-      id: 5,
-      name: "Lorem ipsum dolor sit amet.",
-      price: "1.000.000đ",
-      status: "Còn hàng",
-      badge: "Developer",
-      image: "./assets/img/product-1.webp",
-    },
-    {
-      id: 5,
-      name: "Lorem ipsum dolor sit amet.",
-      price: "1.000.000đ",
-      status: "Còn hàng",
-      badge: "Developer",
-      image: "./assets/img/product-1.webp",
-    },
+    { id: 1, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
+    { id: 2, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
+    { id: 3, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
+    { id: 4, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
+    { id: 5, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
+    { id: 6, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
+    { id: 7, name: "Lorem ipsum dolor sit amet.", price: "1.000.000đ", status: "Còn hàng", badge: "Developer", image: "./assets/img/product-1.webp",},
   ];
 
   return (
