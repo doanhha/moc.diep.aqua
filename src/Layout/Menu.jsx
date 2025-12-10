@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const Menu = () => {
     const listFindProducts = [
         { id: 1, name: "Tất Cả Sản Phẩm", path: "/ProductsList" },
-        { id: 2, name: "Máy Lọc, Vật Liệu Lọc", path: "/ProductsList" },
-        { id: 3, name: "Máy Sủi Oxy, Bơm, Máy Sưởi", path: "/ProductsList" },
-        { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh", path: "/ProductsList" },
-        { id: 5, name: "Đèn Thủy Sinh", path: "/ProductsList" },
-        { id: 6, name: "Phụ Kiện Thủy Sinh Khác", path: "/ProductsList" },
+        { id: 2, name: "Máy Lọc, Vật Liệu Lọc", path: "/Mayloc" },
+        { id: 3, name: "Máy Sủi Oxy, Bơm, Máy Sưởi", path: "/Maysuioxi" },
+        { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh", path: "/Phannen" },
+        { id: 5, name: "Đèn Thủy Sinh", path: "/Denthuysinh" },
+        { id: 6, name: "Phụ Kiện Thủy Sinh Khác", path: "/Phukienthuyssinh" },
         { id: 7, name: "Thức Ăn Cho Cá/Tép", path: "/ProductsList" },
         { id: 8, name: "Thuốc Chữa Bệnh Cho Cá/Tép", path: "/ProductsList" },
         { id: 9, name: "Cây Thủy Sinh", path: "/ProductsList" }

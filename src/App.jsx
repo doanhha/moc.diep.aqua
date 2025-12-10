@@ -9,6 +9,11 @@ import Infomation from './Components/Infomation'
 import ProductsList from './Components/ProductsList'
 import HandbookAll from './Layout/HandbookAll'
 import Contact from './Layout/Contact'
+import Mayloc from './Layout/Mayloc'
+import Maysuioxi from './Layout/Maysuioxi'
+import Phannen from './Layout/Phannen'
+import Denthuysinh from './Layout/Denthuysinh'
+import Phukienthuyssinh from './Layout/Phukienthuyssinh'
 
 const App = () => {
   return (
@@ -20,6 +25,11 @@ const App = () => {
        <Route path='/ProductsList' element={<ProductsList/>} />
        <Route path='/HandbookAll' element={<HandbookAll/>} />
        <Route path='/Contact' element={<Contact/>} />
+      <Route path='/Mayloc' element={<Mayloc />} />
+      <Route path='/Maysuioxi' element={<Maysuioxi />} />
+      <Route path='/Phannen' element={<Phannen />} />
+      <Route path='/Denthuysinh' element={<Denthuysinh />} />
+      <Route path='/Phukienthuyssinh' element={<Phukienthuyssinh />} />
     </Routes>
     </BrowserRouter>
   )
