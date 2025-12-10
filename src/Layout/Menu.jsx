@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const listFindProducts = [
-        { id: 1, name: "Tất Cả Sản Phẩm", path: "/ProductsList"},
+        { id: 1, name: "Tất Cả Sản Phẩm", path: "/ProductsList" },
         { id: 2, name: "Máy Lọc, Vật Liệu Lọc", path: "/ProductsList" },
         { id: 3, name: "Máy Sủi Oxy, Bơm, Máy Sưởi", path: "/ProductsList" },
         { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh", path: "/ProductsList" },
@@ -48,14 +48,16 @@ const Menu = () => {
                                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                         {listFindProducts.map(itemSoft => (
                                             <li key={itemSoft.id}>
-                                                <Link className="dropdown-item click-open-hover" to= {itemSoft.path} >{itemSoft.name}</Link>
+                                                <Link className="dropdown-item click-open-hover" to={itemSoft.path} >{itemSoft.name}</Link>
                                             </li>
                                         ))}
                                     </ul>
                                 </li>
-
                                 <li className="nav-item">
-                                    <a className="nav-link hover-animation" to="#">Liên hệ</a>
+                                    <Link className="nav-link hover-animation" to="/HandbookAll">Cẩm nang ẩm thực</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link className="nav-link hover-animation" to="/Contact">Liên hệ</Link>
                                 </li>
                             </ul>
                         </div>

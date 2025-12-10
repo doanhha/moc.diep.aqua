@@ -89,7 +89,7 @@ const ProductsList = () => {
                 </div>
             </div>
             {Allproducts.imagesBanner.map((item =>
-                <div className="container" key={item.id}>
+                <div className="container" key={item.id}> 
                     <img src={item.image} alt={item.name} className="img-banner" />
                     <h2 className="sale">Hàng giá tốt</h2>
                     {/* list products */}

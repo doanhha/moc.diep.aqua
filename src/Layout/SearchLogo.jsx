@@ -14,9 +14,9 @@ const SearchLogo = () => {
                         </div>
                         <div className="col-xl-4 col-lg-4 col-12 header-search">
                             <div className="search-header">
-                                <div className="search-smart">
+                                <div className="search-smart" >
                                     <input type="text" placeholder="Search.." />
-                                <button ><img src="./assets/img/search-logo.svg" alt="" /></button>
+                                <button><img src="./assets/img/search-logo.svg" alt="" /></button>
                                 </div>
                             </div>
                         </div>
