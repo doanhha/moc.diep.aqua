@@ -9,9 +9,9 @@ const Menu = () => {
         { id: 4, name: "Phân Nền, Cốt Nền Thủy Sinh", path: "/Phannen" },
         { id: 5, name: "Đèn Thủy Sinh", path: "/Denthuysinh" },
         { id: 6, name: "Phụ Kiện Thủy Sinh Khác", path: "/Phukienthuyssinh" },
-        { id: 7, name: "Thức Ăn Cho Cá/Tép", path: "/ProductsList" },
-        { id: 8, name: "Thuốc Chữa Bệnh Cho Cá/Tép", path: "/ProductsList" },
-        { id: 9, name: "Cây Thủy Sinh", path: "/ProductsList" }
+        { id: 7, name: "Thức Ăn Cho Cá/Tép", path: "/Thucancatep" },
+        { id: 8, name: "Thuốc Chữa Bệnh Cho Cá/Tép", path: "/Thuocchuabenh" },
+        { id: 9, name: "Cây Thủy Sinh", path: "/Caythuysinh" }
     ]
     return (
         <>

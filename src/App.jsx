@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
 import './assets/css/style.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './Components/Header'
@@ -14,6 +13,9 @@ import Maysuioxi from './Layout/Maysuioxi'
 import Phannen from './Layout/Phannen'
 import Denthuysinh from './Layout/Denthuysinh'
 import Phukienthuyssinh from './Layout/Phukienthuyssinh'
+import Thucancatep from './Layout/Thucancatep'
+import Thuocchuabenh from './Layout/Thuocchuabenh'
+import Caythuysinh from './Layout/Caythuysinh'
 
 const App = () => {
   return (
@@ -30,6 +32,9 @@ const App = () => {
       <Route path='/Phannen' element={<Phannen />} />
       <Route path='/Denthuysinh' element={<Denthuysinh />} />
       <Route path='/Phukienthuyssinh' element={<Phukienthuyssinh />} />
+      <Route path='/Thucancatep' element={<Thucancatep />} />
+      <Route path='/Thuocchuabenh' element={<Thuocchuabenh />} />
+      <Route path='/Caythuysinh' element={<Caythuysinh />} />
     </Routes>
     </BrowserRouter>
   )
