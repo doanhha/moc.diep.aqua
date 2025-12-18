@@ -13,6 +13,22 @@ export default function Mayloc() {
     { id: 9, name: "Đèn rọi chỉnh tiêu cự HBPRO, 3 chế độ màu cho bể cá", price: "119.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
     { id: 10, name: "Detox Koika - Xử lý Clo, kim loại nặng, chống sốc cá và khử độc tố", price: "31.000", image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   ];
+  const listFilter = [
+    { id: 1, name: "Giá dưới 500.000" },
+    { id: 2, name: "500.000 - 1.000.000" },
+    { id: 3, name: "1.000.000 - 3.000.000" },
+    { id: 4, name: "3.000.000 - 5.000.000" },
+    { id: 5, name: "5.000.000 - 7.000.000" },
+    { id: 6, name: "Trên 7.000.000" },
+  ];
+  const listFilter2 = [
+        { id: 1, name: "Tên A-Z" },
+        { id: 2, name: "Tên Z-A" },
+        { id: 3, name: "Giá Tăng Dần" },
+        { id: 4, name: "Giá Giảm Dần" },
+        { id: 5, name: "Mới Nhất" },
+        { id: 6, name: "Cũ Nhất" },
+    ];
   return (
     <>
       <nav aria-label="breadcrumb" className="py-1" style={{ backgroundColor: 'rgb(235, 245, 255)' }}>
@@ -26,16 +42,30 @@ export default function Mayloc() {
       </nav>
       <div className="container my-4">
         <h3 className='span-vip'>Máy lọc, Vật Liệu Lọc</h3>
-        <div className="row">
-          <div className="col-md-3 col-6 mb-4">
-            <div className="card h-100">
-              <img src="https://bizweb.dktcdn.net/100/438/408/products/may-loc-nuoc-ho-ca-koi-atman-at-303-01.jpg?v=1669942636000" className="card-img-top" alt="..." />
-              <div className="card-body">
-                <h5 className="card-title span-vip">Máy Lọc Nước Hồ Cá Koi Atman AT-303</h5>
-                <p className="card-text text-danger span-vip">1,200,000 ₫</p>
+        <div className="d-flex mb-3">
+          <span className='me-2'>Lọc theo giá:</span>
+          {listFilter.map((filter) => (
+            <button key={filter.id} className="btn btn-outline-primary btn-sm me-2 mb-2">{filter.name}</button>
+          ))}
+        </div>
+        <div className="d-flex mb-3">
+          <span className='me-2'>Chọn theo tiêu chí: </span>
+          {listFilter2.map((filter) => (
+            <button key={filter.id} className="btn btn-outline-primary btn-sm me-2 mb-2">{filter.name}</button>
+          ))}
+        </div>
+        <div className="row mt-2">
+          {products.map((product) => (
+            <div className="col-md-3 col-6 mb-4" key={product.id}>
+              <div className="card h-100">
+                <img src={product.image} className="card-img-top" alt={product.name} />
+                <div className="card-body">
+                  <h5 className="card-title span-vsip">{product.name}</h5>
+                  <p className="card-text text-danger span-vip">{product.price} ₫</p>
+                </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </>
