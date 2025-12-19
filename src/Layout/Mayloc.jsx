@@ -1,39 +1,37 @@
 import { useMemo, useState } from "react";
+const products = [
+  { id: 1, name: "A", price: 500000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 2, name: "B", price: 700000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 3, name: "C", price: 31000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 4, name: "D", price: 4000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 5, name: "E", price: 5000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 6, name: "F", price: 6000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 7, name: "G", price: 700000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 8, name: "H", price: 800000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 9, name: "I", price: 900000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 10, name: "K", price: 1000000 , image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+];
+const listFilter = [
+  { id: 1, name: "Giá dưới 500.000" },
+  { id: 2, name: "500.000 - 1.000.000" },
+  { id: 3, name: "1.000.000 - 3.000.000" },
+  { id: 4, name: "3.000.000 - 5.000.000" },
+  { id: 5, name: "5.000.000 - 7.000.000" },
+  { id: 6, name: "Trên 7.000.000" },
+];
+const listFilter2 = [
+  { id: 1, name: "Tên A-Z" },
+  { id: 2, name: "Tên Z-A" },
+  { id: 3, name: "Giá Tăng Dần" },
+  { id: 4, name: "Giá Giảm Dần" },
+  { id: 5, name: "Mới Nhất" },
+  { id: 6, name: "Cũ Nhất" },
+];
 
 
 export default function Mayloc() {
-  const products = [
-    { id: 1, name: "Thức ăn cá cảnh Hikari Mix 5 in 1 cao cấp cho cá cảnh tăng màu tăng size", price: 135000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 2, name: "Đèn Lon thủy sinh KZJ RM4, chiếc đèn chuyên chơi Biotope độc đáo", price: 1650000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 3, name: "Đèn KZJ RA3 hệ LED WRGB+UV chuyên dùng cho bể Biotope", price: 1400000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 4, name: "Máy Lọc Chìm Sunsun YQP: Giải Pháp Toàn Diện Cho Bể Cá Cảnh Luôn Sạch Trong", price: 145000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 5, name: "Lọc thác Sunsun Xiaoli EBL 401, 402, 403", price: 105000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 6, name: "Máy sủi Oxy tích điện bể cá Sunsun YQB cao cấp siêu êm", price: 188000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 7, name: "Máy thổi luồng SUNSUN JVP – Giải pháp tạo dòng chảy cho bể cá", price: 320000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 8, name: "Lọc thùng tách phân Sunsun YWY 800 - tích hợp tách phân, xả đáy", price: 1530000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 9, name: "Đèn rọi chỉnh tiêu cự HBPRO, 3 chế độ màu cho bể cá", price: 119000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-    { id: 10, name: "Detox Koika - Xử lý Clo, kim loại nặng, chống sốc cá và khử độc tố", price: 31000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-  ];
-  const listFilter = [
-    { id: 1, name: "Giá dưới 500.000" },
-    { id: 2, name: "500.000 - 1.000.000" },
-    { id: 3, name: "1.000.000 - 3.000.000" },
-    { id: 4, name: "3.000.000 - 5.000.000" },
-    { id: 5, name: "5.000.000 - 7.000.000" },
-    { id: 6, name: "Trên 7.000.000" },
-  ];
-  const listFilter2 = [
-    { id: 1, name: "Tên A-Z" },
-    { id: 2, name: "Tên Z-A" },
-    { id: 3, name: "Giá Tăng Dần" },
-    { id: 4, name: "Giá Giảm Dần" },
-    { id: 5, name: "Mới Nhất" },
-    { id: 6, name: "Cũ Nhất" },
-  ];
+  const formatVND = (value) => Number(value).toLocaleString("vi-VN") + "đ";
   const [filterPrice, setFilterPrice] = useState(null);     // id filter giá
-  const [filterCategory, setFilterCategory] = useState(null); // tên category
-  const [filterOrigin, setFilterOrigin] = useState(null);     // xuất xứ
-  const [searchText, setSearchText] = useState("");           // từ khoá tìm kiếm
   const [sortOption, setSortOption] = useState(null);         // id sort
 
   const getPriceRange = (id) => {
@@ -44,7 +42,7 @@ export default function Mayloc() {
       case 4: return { min: 3000000, max: 5000000 };
       case 5: return { min: 5000000, max: 7000000 };
       case 6: return { min: 7000000, max: Infinity };
-      default: return { min: 0, max: Infinity };
+      default: return null;
     }
   };
   const filterProducts = useMemo(() => {
@@ -56,19 +54,30 @@ export default function Mayloc() {
       data = data.filter(p => p.price >= range.min && p.price <= range.max);
     };
     // Sắp xếp
-    if (sortOption) {
-      switch (sortOption) {
-        case 1: data.sort((a, b) => a.name.localeCompare(b.name)); break;
-        case 2: data.sort((a, b) => b.name.localeCompare(a.name)); break;
-        case 3: data.sort((a, b) => a.price - b.price); break;
-        case 4: data.sort((a, b) => b.price - a.price); break;
-        case 5: data.sort((a, b) => b.id - a.id); break; // Mới nhất
-        case 6: data.sort((a, b) => a.id - b.id); break; // Cũ nhất
-        default: break;
-      }
-    };
+    switch (sortOption) {
+      case 1: // Tên A-Z
+        data.sort((a, b) => a.name.localeCompare(b.name, 'vi'));
+        break;
+      case 2: // Tên Z-A
+        data.sort((a, b) => b.name.localeCompare(a.name, 'vi'));
+        break;
+      case 3: // Giá Tăng Dần
+        data.sort((a, b) => a.price - b.price);
+        break;
+      case 4: // Giá Giảm Dần
+        data.sort((a, b) => b.price - a.price);
+        break;
+      case 5: // Mới Nhất (id lớn hơn = mới hơn)
+        data.sort((a, b) => b.id - a.id);
+        break;
+      case 6: // Cũ Nhất
+        data.sort((a, b) => a.id - b.id);
+        break;
+      default:
+        break;
+    }
     return data;
-  }, [filterPrice, products, sortOption]);
+  }, [filterPrice, sortOption, products]);
   return (
     <>
       <nav aria-label="breadcrumb" className="py-1" style={{ backgroundColor: 'rgb(235, 245, 255)' }}>
@@ -77,32 +86,53 @@ export default function Mayloc() {
             <li className="breadcrumb-item"><a className='text-dark text-decoration-none' href="#">Trang chủ</a></li>
             <li className="breadcrumb-item"><a className='text-dark text-decoration-none' href="#">Sản Phẩm</a></li>
             <li className="breadcrumb-item active span-vip" aria-current="page">Máy lọc, Vật Liệu Lọc</li>
-          </ol>   
+          </ol>
         </div>
       </nav>
       <div className="container my-4">
         <h3 className='span-vip'>Máy lọc, Vật Liệu Lọc</h3>
-        <div className="d-flex mb-3">
-          <span className='me-2'>Lọc theo giá:</span>
-          {listFilter.map((filter) => (
-            <button onClick={() => setFilterPrice(prev => (prev === filter.id ? null : filter.id))} className="btn btn-outline-primary btn-sm me-2 mb-2">{filter.name}</button>
+        <div className="list-filter">
+          <span className="filter-title">Lọc theo khoảng giá </span>
+          {listFilter.map(filter => (
+            <button key={filter.id}
+              className={"filter-item " + (filterPrice === filter.id ? "filter-item-active" : "")}
+              onClick={() => setFilterPrice(filterPrice === filter.id ? null : filter.id)}>
+              {filter.name}
+            </button>
           ))}
         </div>
-        <div className="d-flex mb-3">
-          <span className='me-2'>Chọn theo tiêu chí: </span>
-          {listFilter2.map((filter) => (
-            <button onClick={() => setFilterPrice(prev => (prev === filter.id ? null : filter.id))} key={filter.id} className="btn btn-outline-primary btn-sm me-2 mb-2">{filter.name}</button>
+        <div className="list-filter">
+          <span className="filter-title">Chọn theo tiêu chí</span>
+          {listFilter2.map(filter => (
+            <button
+              key={filter.id}
+              className={
+                "filter-item " +
+                (sortOption === filter.id ? "filter-item-active" : "")
+              }
+              onClick={() =>
+                setSortOption(
+                  sortOption === filter.id ? null : filter.id
+                )
+              }
+            >
+              {filter.name}
+            </button>
           ))}
         </div>
-        {products.length} sản phẩm
-        <div className="row mt-2">
+        {filterProducts.length} sản phẩm
+        <div className="row row-cols-1 row-cols-md-3 g-4 mt-2">
           {filterProducts.map((product) => (
-            <div className="col-md-3 col-6 mb-4" key={product.id}>
-              <div className="card h-100">
-                <img src={product.image} className="card-img-top" alt={product.name} />
-                <div className="card-body">
-                  <h5 className="card-title span-vsip">{product.name}</h5>
-                  <p className="card-text text-danger span-vip">{product.price} ₫</p>
+            <div className="col set-width-product text-center" key={product.id}>
+              <div className="card">
+                <img src={product.image} className="card-img-top" alt={product.name} title={product.name} />
+                <div className="card-body p-0">
+                  <h4 className="card-title">{product.name}</h4>
+                  <p className="price-products">{formatVND(product.price)} </p>
+                </div>
+                <div className="group-action">
+                  <button className="btn-card-shop"><img style={{ width: 30, height: 30 }} src={product.icon} alt="Add to cart" title='Thêm Giỏ Hàng' /></button>
+                  <button className="btn-view-product"><img style={{ width: 30, height: 30 }} src={product.iconView} alt="View product" title='Xem Thêm' /></button>
                 </div>
               </div>
             </div>
