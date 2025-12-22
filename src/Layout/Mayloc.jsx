@@ -1,15 +1,18 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
+
 const products = [
   { id: 1, name: "A", price: 500000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 2, name: "B", price: 700000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-  { id: 3, name: "C", price: 31000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 3, name: "C", price: 3100000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 4, name: "D", price: 4000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 5, name: "E", price: 5000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 6, name: "F", price: 6000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 7, name: "G", price: 700000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 8, name: "H", price: 800000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
   { id: 9, name: "I", price: 900000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
-  { id: 10, name: "K", price: 1000000 , image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
+  { id: 10, name: "K", price: 1000000, image: "./assets/img/pruduct-2.webp", icon: "./assets/img/shopping-cart-svgrepo-com.svg", iconView: "./assets/img/eye-svgrepo-com.svg" },
 ];
 const listFilter = [
   { id: 1, name: "Giá dưới 500.000" },
@@ -78,6 +81,19 @@ export default function Mayloc() {
     }
     return data;
   }, [filterPrice, sortOption, products]);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filterPrice, sortOption]);
+
+  const totalPages = Math.ceil(filterProducts.length / itemsPerPage);
+  const paginatedProducts = useMemo(() => {
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    return filterProducts.slice(startIndex, startIndex + itemsPerPage);
+  }, [currentPage, filterProducts]);
+
   return (
     <>
       <nav aria-label="breadcrumb" className="py-1" style={{ backgroundColor: 'rgb(235, 245, 255)' }}>
@@ -122,7 +138,7 @@ export default function Mayloc() {
         </div>
         {filterProducts.length} sản phẩm
         <div className="row row-cols-1 row-cols-md-3 g-4 mt-2">
-          {filterProducts.map((product) => (
+          {paginatedProducts.map((product) => (
             <div className="col set-width-product text-center" key={product.id}>
               <div className="card">
                 <img src={product.image} className="card-img-top" alt={product.name} title={product.name} />
@@ -137,8 +153,32 @@ export default function Mayloc() {
               </div>
             </div>
           ))}
+          {filterProducts.length === 0 && (
+            <div className="col-12">
+              <p className="text-center">Không tìm thấy sản phẩm phù hợp. <Link to="/"> Tất cả sản phẩm</Link></p>
+            </div>
+          )}
         </div>
+        {totalPages > 1 && (
+          <nav aria-label="Page navigation example" className="my-4">
+            <ul className="pagination justify-content-center">
+              <li className={"page-item " + (currentPage === 1 ? "disabled" : "")}>
+                <button className="page-link" onClick={() => setCurrentPage(currentPage - 1)}>«</button>
+              </li>
+              {Array.from({ length: totalPages }, (_, index) => (
+                <li key={index + 1} className={"page-item " + (currentPage === index + 1 ? "active" : "")}>
+                  <button className="page-link" onClick={() => setCurrentPage(index + 1)}>{index + 1}</button>
+                </li>
+              ))}
+              <li className={"page-item " + (currentPage === totalPages ? "disabled" : "")}>
+                <button className="page-link" onClick={() => setCurrentPage(currentPage + 1)}>»</button>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
+
+      <Footer />
     </>
   )
 }

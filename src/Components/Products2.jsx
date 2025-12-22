@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import Mayloc from '../Layout/Mayloc';
 
 
 const Products2 = () => {
@@ -12,7 +14,7 @@ const Products2 = () => {
     return (
         <>
             <div className="container">
-                <h1 style={{fontSize: 25, textTransform: 'uppercase'}} className="text-center mb-5">Hải sản mới về</h1>
+                <h1 style={{fontSize: 25, textTransform: 'uppercase'}} className="text-center mb-5">Máy lọc, Vật Liệu Lọc</h1>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {products.map((item) => 
                     <div className="col set-width-product text-center" key={item.id}>
@@ -33,7 +35,7 @@ const Products2 = () => {
 
                 </div>
                 <div className="text-center mrt-30 mt-4 mb-4">
-                    <a href="san-pham-moi" title="Xem tất cả" className="btn btn-view">Xem tất cả</a>
+                    <Link to="/Mayloc" title="Xem tất cả" className="btn btn-view">Xem tất cả</Link>
                 </div>
             </div>
         </>

@@ -15,6 +15,7 @@
     "@icon/themify-icons": "^1.0.1-alpha.3",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.8",
+    "mongodb": "^7.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.10.0",
