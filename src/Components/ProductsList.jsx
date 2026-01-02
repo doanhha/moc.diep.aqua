@@ -1,11 +1,8 @@
 import 'swiper/css';
-import Topbar from '../Layout/Topbar'
-import Menu from '../Layout/Menu'
-import SearchLogo from '../Layout/SearchLogo'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import Footer from "./Footer.jsx";
 import Allproducts from '../Layout/Allproducts.jsx'
-import { useMemo, useState } from 'react';
+import {useEffect, useMemo, useState } from 'react';
 
 const ProductsList = () => {
     const listFilter = Allproducts.listFilter;
@@ -18,7 +15,7 @@ const ProductsList = () => {
     const [selectedPriceFilter, setSelectedPriceFilter] = useState(null);
     const [selectedSort, setSelectedSort] = useState(null);
     const getPriceRange = (id) => {
-        switch (id) {
+        switch (id) {   
             case 1: return { min: 0, max: 500000 };
             case 2: return { min: 500000, max: 1000000 };
             case 3: return { min: 1000000, max: 3000000 };
