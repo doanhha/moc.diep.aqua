@@ -759,3 +759,9 @@ html, body, #root {
     color: #ffffff !important;
     background-color: #0282a5 !important;
 }
+.form-login {
+    background: #ffffff;
+    border-radius: 20px;
+    /* filter: contrast(0.5); */
+    box-shadow: 1px 1px 10px #333;
+}

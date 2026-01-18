@@ -1,7 +1,7 @@
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react'
-import Footer from "./Footer.jsx";
-import Allproducts from '../Layout/Allproducts.jsx'
+import Footer from "../../Components/Footer.jsx";
+import Allproducts from './Allproducts.jsx'
 import {useEffect, useMemo, useState } from 'react';
 
 const ProductsList = () => {

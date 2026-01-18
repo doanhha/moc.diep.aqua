@@ -1,7 +1,7 @@
 import React from 'react'
-import FooterBottom from '../Layout/FooterBottom'
-import Handbook from '../Layout/Handbook.jsx'
-import Authorized from '../Layout/Authorized.jsx'
+import FooterBottom from '../Layout/bottom/FooterBottom.jsx'
+import Handbook from '../Layout/bottom/Handbook.jsx'
+import Authorized from '../Layout/bottom/Authorized.jsx'
 
 const Footer = () => {
   return (

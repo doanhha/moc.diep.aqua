@@ -23,7 +23,7 @@ const Products = () => {
                 {catalogProduct.map((item) =>
                         <div key={item.id} className="col-6 col-sm-4 col-md-3 col-lg-2 products-col ">
                             <div className="category-item">
-                                <a href><img src={item.image} alt={item.title} /></a>
+                                <a href="#"><img src={item.image} alt={item.title} /></a>
                             </div>
                             <p className="span-vip">{item.title}</p>
                         </div>

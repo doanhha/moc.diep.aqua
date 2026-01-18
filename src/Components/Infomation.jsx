@@ -1,9 +1,9 @@
 import React from 'react'
-import SearchLogo from '../Layout/SearchLogo'
-import Topbar from '../Layout/Topbar'
-import Menu from '../Layout/Menu'
-import Authorized from '../Layout/Authorized'
-import FooterBottom from '../Layout/FooterBottom'
+import SearchLogo from '../Layout/Top/SearchLogo'
+import Topbar from '../Layout/Top/Topbar'
+import Menu from '../Layout/Top/Menu'
+import Authorized from '../Layout/bottom/Authorized'
+import FooterBottom from '../Layout/bottom/FooterBottom'
 import { Link } from 'react-router-dom'
 
 const Infomation = () => {

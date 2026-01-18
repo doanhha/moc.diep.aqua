@@ -24,17 +24,13 @@ const listFilter2 = [
 export default function Mayloc() {
   const formatVND = (value) => Number(value || 0).toLocaleString("vi-VN") + "đ";
 
-  // ✅ DATA TỪ DB
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errorMsg, setErrorMsg] = useState("");
 
-  // ✅ FILTER/SORT GIỮ NGUYÊN
   const [filterPrice, setFilterPrice] = useState(null);
   const [sortOption, setSortOption] = useState(null);
 
-  // ✅ FETCH DB: chỉ lấy sản phẩm category "may-loc"
-  // (dựa theo dữ liệu của anh: categorySlug: "may-loc")
   useEffect(() => {
     let ignore = false;
 
@@ -131,7 +127,6 @@ export default function Mayloc() {
         <div className="container">
           <ol className="breadcrumb">
             <li className="breadcrumb-item"><a className="text-dark text-decoration-none" href="#">Trang chủ</a></li>
-            <li className="breadcrumb-item"><a className="text-dark text-decoration-none" href="#">Sản Phẩm</a></li>
             <li className="breadcrumb-item active span-vip" aria-current="page">Máy lọc, Vật Liệu Lọc</li>
           </ol>
         </div>

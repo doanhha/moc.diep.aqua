@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Mayloc from '../Layout/Mayloc';
+import Mayloc from '../Mayloc';
 
 
 const Products2 = () => {
