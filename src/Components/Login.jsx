@@ -42,6 +42,10 @@ const Login = () => {
 
       if (!res.ok || !data?.ok) {
         throw new Error(data?.message || `HTTP ${res.status}`);
+      }else {
+        // Đăng nhập thành công
+        window.alert("Đăng nhập thành công!");
+        window.location.assign("/");
       }
 
       navigate("/", { replace: true });

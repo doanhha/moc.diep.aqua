@@ -23,11 +23,22 @@ const Infomation = () => {
           </div>
           <div className="row"> 
             <div className="col-12 col-md-8 info-left">
-              <h3>Giới thiệu về công ty TNHH Thương Mại Dịch Vụ Doanh Hà</h3>
-              <p>Công ty TNHH Thương Mại Dịch Vụ Doanh Hà được thành lập vào ngày 10 tháng 10 năm 2010, chuyên kinh doanh các sản phẩm điện tử tiêu dùng như điện thoại di động, máy tính bảng, laptop và các phụ kiện công nghệ khác. Với hơn 10 năm kinh nghiệm trong ngành, chúng tôi tự hào là một trong những nhà cung cấp hàng đầu tại Việt Nam.</p>
-              <p>Chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng cao, dịch vụ chăm sóc khách hàng tận tâm và giá cả cạnh tranh nhất trên thị trường. Đội ngũ nhân viên của chúng tôi luôn sẵn sàng hỗ trợ và tư vấn để giúp khách hàng lựa chọn được sản phẩm phù hợp nhất với nhu cầu của mình.</p>
-              <p>Trong suốt quá trình hoạt động, Công ty TNHH Thương Mại Dịch Vụ Doanh Hà đã xây dựng được mạng lưới đối tác rộng khắp và nhận được sự tin tưởng từ hàng ngàn khách hàng trên toàn quốc. Chúng tôi không ngừng nỗ lực để cải thiện chất lượng sản phẩm và dịch vụ, nhằm đáp ứng tốt nhất nhu cầu ngày càng cao của khách hàng.</p>
-              <p>Chúng tôi xin chân thành cảm ơn sự ủng hộ và tin tưởng của quý khách hàng trong suốt thời gian qua. Hy vọng sẽ tiếp tục được đồng hành cùng quý khách trong những chặng đường phát triển sắp tới.</p>
+              <h2 className="title-handbook-all span-vip">Giới thiệu</h2>
+              <p>
+                Chào mừng bạn đến với <span className='span-vip font-weight-bold'><Link to="/">Mộc Diệp - Aquarium</Link></span>, nơi đam mê và sự tận tâm với thế giới thủy sinh hội tụ. Chúng tôi tự hào là một trong những cửa hàng hàng đầu tại Việt Nam chuyên cung cấp các sản phẩm và dịch vụ liên quan đến bể cá cảnh và thủy sinh.
+              </p>
+              <p>
+                Tại Mộc Diệp - Aquarium, chúng tôi hiểu rằng mỗi bể cá không chỉ là một không gian trang trí mà còn là một hệ sinh thái phức tạp đòi hỏi sự chăm sóc và kiến thức chuyên sâu. Với đội ngũ nhân viên giàu kinh nghiệm và đam mê, chúng tôi cam kết mang đến cho khách hàng những sản phẩm chất lượng cao, từ các loại cá cảnh đa dạng, cây thủy sinh phong phú đến các thiết bị và phụ kiện hiện đại.
+              </p>
+              <p>
+                Chúng tôi không chỉ cung cấp sản phẩm mà còn là người bạn đồng hành đáng tin cậy trong hành trình chăm sóc bể cá của bạn. Dịch vụ tư vấn chuyên nghiệp của chúng tôi sẽ giúp bạn lựa chọn những giải pháp phù hợp nhất với nhu cầu và điều kiện của bạn, từ việc thiết kế bể cá, lựa chọn loài cá và cây thủy sinh đến cách duy trì môi trường sống lý tưởng cho các sinh vật trong bể.
+              </p>
+              <p>
+                Mộc Diệp - Aquarium không ngừng nỗ lực để mang đến trải nghiệm mua sắm tuyệt vời nhất cho khách hàng. Chúng tôi luôn cập nhật những xu hướng mới nhất trong lĩnh vực thủy sinh và cam kết mang đến giá trị tốt nhất với mức giá cạnh tranh.
+              </p>
+              <p>
+                Cảm ơn bạn đã lựa chọn Mộc Diệp - Aquarium. Chúng tôi rất mong được phục vụ và đồng hành cùng bạn trong hành trình khám phá và tận hưởng vẻ đẹp của thế giới thủy sinh.
+              </p>
             </div>
           </div>
         </div>

@@ -58,7 +58,7 @@ html, body, #root {
 .search-header {
     height: auto;
     width: 100%;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
@@ -69,7 +69,7 @@ html, body, #root {
     /* background-color: #0282a5; */
     cursor: pointer;
     padding: 20px;
-    /* border-radius: 30px; */
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,13 +89,12 @@ html, body, #root {
     background-color: transparent;
 }
 .search-header button {
-    /* border-radius: 100%; */
+    border-radius: 50px;
     height: 50px;
     width: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
 }
 .search-header button img {
     width: 40px;
@@ -418,8 +417,7 @@ html, body, #root {
     cursor: pointer;
 }
 
-.btn-card-shop,
-.btn-view-product {
+.btn-card-shop {
     width: 50px;
     height: 50px;
     padding: 0;
@@ -428,7 +426,10 @@ html, body, #root {
     border: 1px solid;
     margin: 0 10px 10px 10px;
 }
-
+.btn-card-shop img {
+    width: 24px;
+    height: 24px;
+}
 .btn-card-shop:hover,
 .btn-view-product:hover {
     transform: scale(1.05);
@@ -660,12 +661,22 @@ html, body, #root {
     border: 1px solid #fff;
     color: #fff;
     margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
     border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
 }
 .btn-search:hover {
     color: #0282a5;
-    background-color: #fff;
     font-weight: 700;
+    background-color: #dbdbdb;
+}
+.btn-search img {
+    width: 40px;
+    height: 40px;
 }
 /* Kết thúc css phần chân trang */
 .copyright p {
@@ -687,6 +698,10 @@ html, body, #root {
     font-size: 28px;
     font-weight: 600;
     margin-top: 25px;
+}
+.card {
+    width: 100%;
+    height: 100%;
 }
 .product-sale-item {
   display: flex;
@@ -764,4 +779,47 @@ html, body, #root {
     border-radius: 20px;
     /* filter: contrast(0.5); */
     box-shadow: 1px 1px 10px #333;
+}
+
+.card-hover:hover {
+    box-shadow: 0 10px 20px rgba(194, 194, 194, 0.3);
+    transform: scale(1.02);
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+.fw-semibold {
+    font-weight: 600 !important;
+    color: #11b0dc !important;
+}
+.viewTitle {
+    background-color: #0282a5;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.viewTitle:hover {
+    background-color: #fff;
+    color: #00AEEF;
+    border: 1px solid #00AEEF;
+    
+}
+.sale_price {
+    color: red !important;
+}
+.order-shop img {
+    width: 20px;
+    height: 20px;
+}
+.order-shop {
+    border: none;
+    cursor: pointer;
+}
+.search-name:hover {
+    transition: 0.5s ease;
+    transform: scale(1.2);
 }

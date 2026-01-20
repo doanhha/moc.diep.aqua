@@ -21,12 +21,17 @@ const Contact = () => {
                 
                 <div className="row">
                     <div className="col-12">
-                        <h2 className="title-handbook-all span-vip">Liên hệ</h2>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12">
-                        <p>Hiện tại trang liên hệ đang được xây dựng. Vui lòng quay lại sau nhé!</p>
+                    <div className="col-12 col-md-6">
+                        <div className="contact-info">
+                            <h3 className="title-contact-info span-vip">Thông tin liên hệ</h3>
+                            <p className="contact-info-item"><strong>Địa chỉ:</strong> Ngõ 300, P.Tây Tựu, Q.Bắc Từ Liêm, Hà Nội</p>
+                            <p className="contact-info-item"><strong>Điện thoại:</strong> 0924.042.444</p>
+                            <p className="contact-info-item"><strong>Email:</strong> hadoanh27@gmail.com</p>
+                            <p className="contact-info-item"><strong>Giờ làm việc:</strong> Các ngày trong tuần từ 8:00 - 21:00</p>
+                        </div>
                     </div>
                 </div>
             </div>

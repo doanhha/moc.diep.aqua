@@ -10,14 +10,14 @@ const SearchLogo = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-3 col-lg-3 col-md-12 col-12 header-logo">
-                            <img src="./assets/img/logo.png" alt className="logo" />
+                            <img src="https://res.cloudinary.com/dnb1p68h9/image/upload/logo_eehcf9.png" alt className="logo" />
                         </div>
                         <div className="col-xl-4 col-lg-4 col-12 header-search">
                             <div className="search-header">
                                 <div className="search-smart" >
-                                    <input type="text" placeholder="Search.." />
-                                <button><img src="./assets/img/search-logo.svg" alt="" /></button>
+                                    <input type="text" placeholder="Search.." className='inputSearch' />
                                 </div>
+                                <button><img className='search-name' src="https://res.cloudinary.com/dnb1p68h9/image/upload/search-logo_psi0az.svg" alt="" /></button>
                             </div>
                         </div>
                         <div className="col-xl-5 col-lg-5 col-md-12 header-control">

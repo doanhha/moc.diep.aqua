@@ -9,12 +9,11 @@ const FooterBottom = () => {
                     <div className="container">
                         <nav className="navbar navbar-light ">
                             <div className="container-fluid p-0">
-                                <a className="navbar-brand"><img src="./assets/img/logo-1.svg" alt /></a>
+                                <a className="navbar-brand"><img src="https://res.cloudinary.com/dnb1p68h9/image/upload/logo-1_zws7ve.svg" alt /></a>
                                 <form className="d-flex">
                                     <input className="form-control me-2 search-pruducts" type="search" placeholder="Search"
                                         aria-label="Search" />
-                                    <button className="btn btn-outline-success btn-search" type="submit"><i
-                                        className="ti-search" /></button>
+                                    <button className="btn btn-outline-success btn-search" type="submit"> <img src="https://res.cloudinary.com/dnb1p68h9/image/upload/search-logo_psi0az.svg" alt="" /> </button>
                                 </form>
                             </div>
                         </nav>
